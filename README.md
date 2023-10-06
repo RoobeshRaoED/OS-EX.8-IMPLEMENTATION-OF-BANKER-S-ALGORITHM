@@ -44,38 +44,32 @@ int pno, rno, i, j, prc,
 count, t, total; count =
 0;
 //clrscr ();
-printf ("\n Enter number of
-process:");
+printf ("\n Enter number of process:");
 scanf ("%d", &pno);
-printf ("\n Enter number
-of resources:");
+printf ("\n Enter number of resources:");
 scanf ("%d", &rno);
 for (i = 1; i <= pno; i++)
 {
 flag[i] = 0;
 }
-printf ("\n Enter total numbers of
-each resources:");
+printf ("\n Enter total numbers of each resources:");
 for (i = 1; i <= rno; i++)
 scanf ("%d", &tres[i]);
-printf ("\n Enter Max resources for
-each process:");
+printf ("\n Enter Max resources for each process:");
 for (i = 1; i <= pno; i++)
 {
-printf ("\n for process %d:",
-i);
+printf ("\n for process %d:", i);
 for (j = 1; j <= rno; j++)
 scanf ("%d", &max[i][j]);
 }
-printf ("\n Enter allocated resources for each
-process:"); for (i = 1; i <= pno; i++)
+printf ("\n Enter allocated resources for each process:"); 
+for (i = 1; i <= pno; i++)
 {
-printf ("\n for process %d:",
-i); for (j = 1; j <= rno; j++)
+printf ("\n for process %d:", i); 
+for (j = 1; j <= rno; j++)
 scanf ("%d", &allocated[i][j]);
 }
-printf ("\n available
-resources:\n");
+printf ("\n available resources:\n");
 for (j = 1; j <= rno; j++)
 {
 avail[j] = 0;
@@ -135,11 +129,9 @@ if (prc != 0)
 break;
 }
 if (prc != 0){
-printf ("\n Process %d completed",
-i);
+printf ("\n Process %d completed", i);
 count++;
-printf ("\n Available
-matrix:")
+printf ("\n Available matrix:");
 for (j = 1; j <= rno; j++)
 {
 work[j] +=
@@ -155,17 +147,15 @@ printf (" %d", work[j]);
 }
 while (count != pno && prc != 0);
 if (count == pno)
-printf ("\nThe system is in a safe
-state!!");
+printf ("\nThe system is in a safe state!!");
 else
-printf ("\nThe system is in an unsafe
-state!!");
+printf ("\nThe system is in an unsafe state!!");
 return 0;
 } 
 ```
 ## OUTPUT:
 
-![]()
+![](1.png)
 
 ## RESULT:
 
